@@ -8,20 +8,6 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-if (isset($_GET['deletar'])) {
-    $id = $_GET['deletar'];
-    $usuario->deletar($id);
-    header('Location: portal.php');
-    exit();
-}
-
-if (isset($_GET['deletar'])) {
-    $idnot = $_GET['deletar'];
-    $noticias->deletar($idnot);
-    header('Location: index.php');
-    exit();
-}
-
 $usuario = new Usuarios($db);
 
 $dados_usuario = $usuario->lerPorId($_SESSION['usuario_id']);
@@ -43,12 +29,12 @@ function saudacao()
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <title>Document</title>
 </head>
 
