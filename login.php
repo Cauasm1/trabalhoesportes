@@ -1,9 +1,9 @@
 <?php
 session_start();
-include_once './Config/Config.php';
-include_once './classes/Usuario.php';
+include_once './config/config.php';
+include_once './classes/Usuarios.php';
 
-$Usuario = new Usuario($db);
+$Usuario = new Usuarios($db);
 if($_SERVER['REQUEST_METHOD']==='POST'){
     if(isset($_POST['email'])){
         $email = $_POST['email'];
@@ -25,25 +25,25 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
-    <header >
-        <h1>Portal de Notícias</h1>
-    </header>
+    
     <div class="container-vap">
-    <h1 class="letra">Login</h1>
+    <h1 >Login</h1>
     <form method = "POST">
     <input type = "email" name = "email" placeholder="insira o email" required>
+    <br>
+    <br>
     <input type = "password" name="senha"placeholder="Insira sua senha"required>
     <br>
     <br>
     <!-- <input type="submit" value = "login"> -->
     <button type="submit">login</button>
 
-    <p>NÃO TEM CONTA?<a href="./Registrar.php"> REGISTRE-SE AQUI </a>  </p>
-    <p>ESQUECEU A SENHA?<a href="./solicitar_recuperacao.php"> RECUPERE AQUI </a>  </p>
+    <p><a href="./registrar.php">cadastre-se </a>  </p>
+    <p><a href="./solicitar_senha.php">recuperar senha</a>  </p>
 
     <br>
     <br>
@@ -61,9 +61,6 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 </div>
 </div>
 
-<footer>
 
-<h1>criador abner  ||  junho de 2024</h1>
- </footer>
 </body>
 </html>
