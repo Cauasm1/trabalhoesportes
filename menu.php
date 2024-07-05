@@ -52,7 +52,7 @@ function saudacao()
 
 
 
-    <div class="cadastro-container">
+    <div class="container-vap">
 
         <h1><?php echo saudacao() . ", " . $nome_usuario; ?>!</h1>
 
