@@ -13,7 +13,7 @@ $usuario = new Usuarios($db);
 $dados_usuario = $usuario->lerPorId($_SESSION['usuario_id']);
 $nome_usuario = $dados_usuario['nome'];
 
-$dados = $usuario->ler();
+
 
 function saudacao()
 {
@@ -42,7 +42,7 @@ function saudacao()
 
     <header>
 
-        <h1>Menu de Receitas</h1>
+        <h1>Esportes</h1>
 
         <br>
 
@@ -58,23 +58,7 @@ function saudacao()
 
     </div>
 
-    <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)) : ?>
-        <tr>
-            <div class="not-container">
-                <br><br>
-                <label>Titulo:</label>
-                <td><?php echo $row['titulo']; ?></td>
-                <br><br>
-                <label>Data:</label>
-                <td><?php echo $row['data']; ?></td>
-                <br><br>
-                <label>Noticia:</label>
-                <br><br>
-                <td><?php echo $row['noticia']; ?></td>
-                <br><br>
-            </div>
-        </tr>
-    <?php endwhile; ?>
+   
 
 </body>
 

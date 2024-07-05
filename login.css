@@ -1,8 +1,10 @@
 html{
+    background-image: url('https://cpdoc.fgv.br/sites/default/files/styles/imagem_direita/public/img-direita/2022-03/shutterstock_1315841180.jpg?h=59592dfb&itok=UE65t_sh');
     background-repeat: no-repeat;
     align-items: center;
     height: 800px;
     display: inline-block;
+    text-align: center;
 }
 
 
