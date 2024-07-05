@@ -1,11 +1,15 @@
 html{
-    background-color: aqua;
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 800px;
+    display: inline-block;
 }
 
+
 header{
-    text-align: center;
+
+text-align: center;
  padding-top: 5px;
- /* position: fixed; */
  background-color: rgba(255, 255, 255, 0.452);
  top: 0;
  left: 0;
@@ -30,8 +34,7 @@ button{
     width: 400px;
     padding: 45px;
     margin: 100px auto;
-    border: 2px black solid; 
-    background-color: rgb(3, 12, 139);
+    background-color: rgba(3, 12, 139, 0.226);
     z-index: 1;
     position: relative;
     max-width: 1000px;

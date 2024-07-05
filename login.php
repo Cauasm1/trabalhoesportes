@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
         if($dados_Usuario = $Usuario->login($email, $senha)){
                 $_SESSION['usuario_id'] = $dados_Usuario['id'];
-                header("Location: portal.php");
+                header("Location: menu.php");
                 exit();
             }else{
                 $mensagem_erro = "Credenciais então inválidas!";
@@ -29,7 +29,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <title>Login</title>
 </head>
 <body>
-    
+    <div class="img background-image: url('https://cpdoc.fgv.br/sites/default/files/styles/imagem_direita/public/img-direita/2022-03/shutterstock_1315841180.jpg?h=59592dfb&itok=UE65t_sh');">
+
     <div class="container-vap">
     <h1 >Login</h1>
     <form method = "POST">
