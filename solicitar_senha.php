@@ -8,7 +8,7 @@ $usuario = new Usuarios($db);
 $codigo = $usuario->gerarCodigoVerificacao($email);
 if ($codigo) {
 $mensagem = "Seu código de verificação é: $codigo. Por favor,
-anote o código e <a href='redefinir_senha.php'>clique aqui</a> para
+anote o código e <a href='recuperar_senha.php'>clique aqui</a> para
 redefinir sua senha.";
 } else {
 $mensagem = 'E-mail não encontrado.';
