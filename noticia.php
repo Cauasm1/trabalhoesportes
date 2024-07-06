@@ -38,7 +38,7 @@ if (!isset($_SESSION['usuario_id'])) {
             <input type="text" name="titulo">
             <br><br>
 
-            <textarea id="noticia" name="noticia" rows="5" cols="33" placeholder="......"></textarea>
+            <textarea id="noticia" name="noticia" rows="5" cols="33" placeholder="Escreava a noticia"></textarea>
             <br><br>
             <input type="submit" class="button" value="Salvar">
         </form>

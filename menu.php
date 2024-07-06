@@ -13,8 +13,6 @@ $usuario = new Usuarios($db);
 $dados_usuario = $usuario->lerPorId($_SESSION['usuario_id']);
 $nome_usuario = $dados_usuario['nome'];
 
-
-
 function saudacao()
 {
     $hora = date('H');
@@ -26,6 +24,7 @@ function saudacao()
         return "Boa noite";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +44,14 @@ function saudacao()
         <h1>Esportes</h1>
 
         <br>
+        
+        <?php
+            if($_SESSION['id_usuario' == 1]){
+                echo '<a class="button" role="button" href="noticia.php">Escrever Noticia</a>'
+            } else {
+                echo ''
+            }
+        ?>
 
         <a class="button" role="button" href="login.php">Logout</a>
 
