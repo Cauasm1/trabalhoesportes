@@ -39,25 +39,7 @@ class Usuarios
         return $this->registrar($nome, $email, $senha);
     }
 
-    public function ler($search = '', $order_by = '')
-    {
-        $query = "SELECT * FROM usuario ";
-        $conditions = [];
-        $params = [];
-
-        if ($search) {
-            $conditions[] = " (nome LIKE :search OR email LIKE :search)";
-            $params[':search'] = '%' . $search . '%';
-        }
-
-        if (count($conditions) > 0) {
-            $query .= " WHERE " . implode(' AND ', $conditions);
-        }
-
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute($params);
-        return $stmt;
-    }
+   
 
     public function lerPorId($id)
     {
