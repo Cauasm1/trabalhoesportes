@@ -54,7 +54,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
           $titulo = $_POST['titulo'];
           $noticia = $_POST['noticia'];
           $noticias->registrar($idusu, $data, $titulo, $noticia);
-          header("Location: portal.php");
+          header("Location: menu.php");
         exit();
     }
   

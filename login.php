@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
         if($dados_Usuario = $Usuario->login($email, $senha)){
                 $_SESSION['usuario_id'] = $dados_Usuario['id'];
-                header("Location: portal.php");
+                header("Location: menu.php");
                 exit();
             }else{
                 $mensagem_erro = "Credenciais estão inválidas!";
