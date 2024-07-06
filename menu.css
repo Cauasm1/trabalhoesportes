@@ -1,46 +1,71 @@
-*{
-    background-image: url('https://cpdoc.fgv.br/sites/default/files/styles/imagem_direita/public/img-direita/2022-03/shutterstock_1315841180.jpg?h=59592dfb&itok=UE65t_sh');
-    background-repeat: no-repeat;
-}
-
-html{
-    background-color: aqua;
-}
-
-header{
+header {
+    background-color: rgb(60, 214, 21);
     text-align: center;
- padding-top: 5px;
- /* position: fixed; */
- background-color: rgba(255, 255, 255, 0.452);
- top: 0;
- left: 0;
- padding-bottom: 0;
-height: 100px; 
-width: 100%;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
-button{
-    background-color: rgb(0, 0, 0);
+.button {
+    background-color: rgba(33, 206, 177, 0.89);
     border: 0;
     border-radius: 100px;
-    text-decoration: none;
-    margin-bottom: 6px;
+    box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+    box-sizing: border-box;
+    color: black;
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 90px;
     padding: 8px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
 }
 
-.container-vap{
+.saudacao {
     text-align: center;
-    width: 400px;
-    padding: 45px;
+    width: 1000px;
+    padding: 10px;
     margin: 100px auto;
     z-index: 1;
     position: relative;
-    max-width: 1000px;
+    max-width: 10000px;
     border-radius: 15px;
-
 }
 
-footer{
+.container {
+    background-color: grey;
+    text-align: center;
+    width: 180px;
+    padding: 100px;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+    top: -100%;
+    left: -35%;
+    line-break: anywhere;
+    display: flexbox;
+}
+
+footer {
     text-align: center;
     box-shadow: 0px 0px 0px rgb(0, 0, 0);
     height: 100px;
@@ -48,8 +73,8 @@ footer{
     background-color: rgba(255, 255, 255, 0.253);
     width: 100%;
     padding-top: 10px;
-    /* border: 2px black solid;  */
     z-index: 2;
     left: 0;
     bottom: 0;
+    
 }

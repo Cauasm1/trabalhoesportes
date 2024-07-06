@@ -41,31 +41,31 @@ function saudacao()
 
     <header>
 
-        <h1>Esportes</h1>
+        <h1>NEW ESPORTS</h1>
 
         <br>
-        
-        <?php
-            if($_SESSION['id_usuario' == 1]){
-                echo '<a class="button" role="button" href="noticia.php">Escrever Noticia</a>'
-            } else {
-                echo ''
-            }
-        ?>
 
-        <a class="button" role="button" href="login.php">Logout</a>
+        <naigation>
+            <a id="primeiro" class="button" role="button" href="login.php">Logout</a>
+        </naigation>
 
     </header>
 
 
 
-    <div class="container-vap">
+    <div class="saudacao">
 
         <h1><?php echo saudacao() . ", " . $nome_usuario; ?>!</h1>
 
     </div>
 
-   
+    <div class="container">
+
+    </div>
+
+    <footer>
+        © 2024 NEW ESPORTS - Todos os direitos reservados.
+    </footer>
 
 </body>
 
