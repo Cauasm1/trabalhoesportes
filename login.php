@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                 header("Location: portal.php");
                 exit();
             }else{
-                $mensagem_erro = "Credenciais então inválidas!";
+                $mensagem_erro = "Credenciais estão inválidas!";
             }
     }
 }
