@@ -2,6 +2,7 @@
 session_start();
 include_once './config/config.php';
 include_once './classes/Usuarios.php';
+include_once './classes/Noticias.php';
 
 if (!isset($_SESSION['usuario_id'])) {
     header('Location: login.php');
@@ -12,6 +13,10 @@ $usuario = new Usuarios($db);
 
 $dados_usuario = $usuario->lerPorId($_SESSION['usuario_id']);
 $nome_usuario = $dados_usuario['nome'];
+
+$noticias = new Noticias($db);
+
+$dados = $noticias->ler();
 
 function saudacao()
 {
@@ -41,31 +46,39 @@ function saudacao()
 
     <header>
 
-        <h1>NEW ESPORTS</h1>
+        <h1>NEW SPORTS</h1>
 
         <br>
 
         <naigation>
+            <a id="primeiro" class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
             <a id="primeiro" class="button" role="button" href="login.php">Logout</a>
         </naigation>
 
     </header>
-
-
 
     <div class="saudacao">
 
         <h1><?php echo saudacao() . ", " . $nome_usuario; ?>!</h1>
 
     </div>
-
     <div class="container">
-
+        <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)) : ?>
+            <div class="box">
+                <label>Titulo:</label>
+                <td><?php echo $row['titulo']; ?></td>
+                <br><br>
+                <label>Noticia:</label>
+                <br>
+                <td><?php echo $row['noticia']; ?></td>
+                <br><br>
+                <label>Data:</label>
+                <td><?php echo $row['data']; ?></td>
+                <br><br>
+                <a id="primeiro" role="button" href="notcompleta.php">Ver mais</a>
+            </div>
+        <?php endwhile; ?>
     </div>
-
-    <footer>
-        © 2024 NEW ESPORTS - Todos os direitos reservados.
-    </footer>
 
 </body>
 
