@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         <br>
         <br>
         <!-- <input type = "submit" value="Salvar"> -->
-        <button class="button">Salvar</button>
+        <button class="glow-on-hover">Salvar</button>
 
     </form>
 </main>
