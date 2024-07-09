@@ -33,10 +33,12 @@ $mensagem = 'E-mail não encontrado.';
 <form method="POST">
 <label for="email">Email:</label>
 <input type="email" name="email" required><br><br>
-<input class="button" type="submit" value="Enviar">
+<button class="glow-on-hover">enviar</button>
+
 </form>
 <p><?php echo $mensagem; ?></p>
-<a class="button" href="login.php">Voltar</a>
+<button class="glow-on-hover" href="login.php">voltar</button>
+
 </div>
 
 </body>

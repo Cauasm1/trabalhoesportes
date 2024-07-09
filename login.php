@@ -40,6 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
+    <header>
+    <h1>NEW ESPORTS</h1>
+    </header>
+
     <div class="img">
         <div class="container">
             <h1>Login</h1>
@@ -50,7 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="senha" placeholder="Insira sua senha" required>
                 <br>
                 <br>
-                <button type="submit">login</button>
+
+                <button type="submit" class="glow-on-hover" type="button">Login</button>
 
                 <p><a href="./registrar.php">cadastre-se </a> </p>
                 <p><a href="./solicitar_senha.php">recuperar senha</a> </p>
