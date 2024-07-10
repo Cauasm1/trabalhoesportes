@@ -57,7 +57,7 @@ if (isset($_GET['idnot'])) {
             <br><br>
             <textarea type="text" name="noticia" required rows="5" cols="33" placeholder="Escreva uma notícia"><?php echo $row['noticia'] ?></textarea>
             <br><br>
-            <input type="submit" value="Atualizar">
+            <input class="button" type="submit" value="Atualizar">
         </form>
 
     </div>
