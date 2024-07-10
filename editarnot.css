@@ -1,0 +1,26 @@
+header {
+    background-color: rgb(60, 214, 21);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.container {
+    text-align: center;
+    width: 400px;
+    padding: 45px;
+    margin: 100px auto;
+    background-color: rgba(3, 12, 139, 0.226);
+    border: 2px black solid;
+    background-color: rgba(71, 73, 71, 0.671);
+    z-index: 1;
+    position: relative;
+    max-width: 1000px;
+    border-radius: 15px;
+}

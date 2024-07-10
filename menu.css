@@ -12,7 +12,7 @@ header {
 }
 
 .button {
-    background-color: rgba(33, 206, 177, 0.89);
+    background-color: #9e0000;
     border: 0;
     border-radius: 100px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
@@ -40,7 +40,7 @@ header {
 }
 
 .buttonpublicar {
-    background-color: rgba(33, 206, 177, 0.89);
+    background-color: #9e0000;
     border: 0;
     border-radius: 100px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
@@ -100,4 +100,17 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+
+
+/* ///////////////////////////////// */
+
+
+.card-header {
+    padding-bottom: 20px;
+    opacity: 0.8;
+    color: #fff;
+ background-color: #9e0000;
 }
