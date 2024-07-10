@@ -28,6 +28,8 @@ if (isset($_GET['idnot'])) {
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +42,8 @@ if (isset($_GET['idnot'])) {
     <header>
         <h1>Portal de Notícias</h1>
     </header>
-
+    <br>
+    <br>
     <div class="container">
 
         <h1>Editar Notícia</h1>

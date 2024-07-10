@@ -23,9 +23,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 </head>
 <body>
    
-
-
-    <main class="container-star">
+<header>
+    <h1>NEW SPORTS</h1>
+    </header>
+    <main class="container">
     <h1>Registrar-se</h1>
     <form method ="POST">
         <input type = "text" name = "nome" placeholder= "nome" required>
@@ -38,7 +39,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         <br>
         <br>
         <!-- <input type = "submit" value="Salvar"> -->
-        <button class="glow-on-hover">Salvar</button>
+        <button class="card-header">Salvar</button>
 
     </form>
 </main>
