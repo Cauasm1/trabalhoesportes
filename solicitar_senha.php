@@ -27,19 +27,22 @@ $mensagem = 'E-mail não encontrado.';
 </head>
 <body>
 
+<header>
+    <h1>NEW SPORTS</h1>
+    </header>
 
-    <div class="container-los">
+    <div class="container">
 <h1>Recuperar Senha</h1>
 <form method="POST">
 <label for="email">Email:</label>
 <input type="email" name="email" required><br><br>
-<button class="glow-on-hover">enviar</button>
+<button class="card-header">enviar</button>
 
 </form>
 <p><?php echo $mensagem; ?></p>
-<button class="glow-on-hover" href="login.php">voltar</button>
+<a href="login.php">voltar</a>
+
 
 </div>
-
 </body>
 </html>

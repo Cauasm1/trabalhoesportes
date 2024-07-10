@@ -25,7 +25,10 @@ $mensagem = 'Código de verificação inválido.';
 </head>
 <body>
 
-    <div class="container-vap">
+<header>
+    <h1>NEW SPORTS</h1>
+    </header>
+    <div class="container">
 <h1>Redefinir Senha</h1>
 <form method="POST">
 <label for="codigo">Verificação:</label>
@@ -33,7 +36,7 @@ $mensagem = 'Código de verificação inválido.';
 required><br><br>
 <label for="nova_senha">Nova Senha:</label>
 <input type="password" name="nova_senha" required><br><br>
-<input type="submit" value="Redefinir Senha">
+<input class="card-header" type="submit" value="Redefinir Senha">
 </form>
 <p><?php echo $mensagem; ?></p>
 </div>
