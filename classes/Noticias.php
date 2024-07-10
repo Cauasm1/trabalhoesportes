@@ -4,7 +4,7 @@ class Noticias
 {
     private $conn;
 
-    private $table_name = "noticias"; //nome da tabela
+    private $table_name = "noticias";
 
     public function __construct($db)
     {

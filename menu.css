@@ -92,10 +92,14 @@ header {
     width: 15rem;
     height: 10rem;
     padding: 1.8rem;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
     margin-left: 20px;
     line-break: anywhere;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
@@ -109,5 +113,4 @@ header {
     opacity: 0.8;
     color: #fff;
  background-color: #9e0000;
-
 }
