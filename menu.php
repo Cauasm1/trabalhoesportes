@@ -50,10 +50,10 @@ function saudacao()
 
         <br>
 
-        <naigation>
+        <navigation>
             <a id="primeiro" class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
             <a id="primeiro" class="button" role="button" href="login.php">Logout</a>
-        </naigation>
+        </navigation>
 
     </header>
 

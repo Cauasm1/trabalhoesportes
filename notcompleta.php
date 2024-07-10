@@ -13,8 +13,11 @@ if (!isset($_SESSION['usuario_id'])) {
 
 $noticias = new Noticias($db);
 
-$dadosnot = $noticias->lerPorIdnot($idnot);
+$dados = $noticias->lerPorIdusu($_SESSION['usuario_id']);
 
+$comentarios = new Comentarios($db);
+
+$dadoscomentarios = $comentarios->ler();
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +54,7 @@ $dadosnot = $noticias->lerPorIdnot($idnot);
     ?>
 
     <div class="container">
-        <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)) : ?>
+        <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="box">
                 <label>Titulo:</label>
                 <td><?php echo $row['titulo']; ?></td>
@@ -65,6 +68,20 @@ $dadosnot = $noticias->lerPorIdnot($idnot);
             </div>
         <?php endwhile; ?>
     </div>
+
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['comentario'])) {
+            $comentarios = new Comentarios($db);
+            $comentario = $_POST['comentario'];
+            $data_envio = date("Y-m-d H:i:s");
+            $comentarios->registrar($comentario, $data_envio);
+            header('Location: menu.php');
+            exit();
+        }
+    }
+    ?>
 
     <div class="container_comentario">
 
@@ -73,44 +90,29 @@ $dadosnot = $noticias->lerPorIdnot($idnot);
         <br>
 
         <form method="POST">
-            <label for="noticia">Escreva um comentário:</label>
+            <label>Escreva um comentário:</label>
             <br><br>
-            <textarea id="comentario" name="comentario" rows="5" cols="33" placeholder="Escreva um comentário"></textarea>
-            <br><br><br>
+            <textarea id="comentario" name="comentario" rows="5" cols="33"
+                placeholder="Escreva um comentário"></textarea>
+            <br><br>
             <input type="submit" value="Publicar">
         </form>
 
     </div>
 
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['titulo']) && isset($_POST['noticia'])) {
-            $noticias = new Noticias($db);
-            $idusu = $_SESSION['usuario_id'];
-            $data = date("Y-m-d");
-            $titulo = $_POST['titulo'];
-            $noticia = $_POST['noticia'];
-            $noticias->registrar($idusu, $data, $titulo, $noticia);
-            header('Location: menu.php');
-            exit();
-        }
-    }
-    ?>
+    <div class="container_areacomentarios">
 
-    <div class="container_box">
-        <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)) : ?>
-            <div class="box">
-                <label>Titulo:</label>
-                <td><?php echo $row['titulo']; ?></td>
+        <h1>Comentários</h1>
+
+        <?php while ($row = $dadoscomentarios->fetch(PDO::FETCH_ASSOC)): ?>
+            <div class="box_comentarios">
+                <td><?php echo $row['comentario']; ?></td>
                 <br><br>
-                <label>Noticia:</label>
-                <br>
-                <td><?php echo $row['noticia']; ?></td>
-                <br><br>
-                <label>Data:</label>
-                <td><?php echo $row['data']; ?></td>
+                <td><?php echo $row['data_envio']; ?></td>
             </div>
+            <br>
         <?php endwhile; ?>
+
     </div>
 
 </body>
