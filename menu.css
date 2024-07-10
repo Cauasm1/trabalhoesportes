@@ -69,13 +69,29 @@ header {
 
 .saudacao {
     text-align: center;
-    width: 1000px;
+    width: 500px;
     padding: 10px;
     margin: 100px auto;
     z-index: 1;
     position: relative;
     max-width: 10000px;
-    border-radius: 15px;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    top: 20px;
+}
+
+.noticiaspubli {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSJXlBHuuq5LZwgQJbfSw5EfpG5hIov_sIw&s);
+    text-align: center;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    color: white;
+}
+
+.noticiaspubli h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 50px;
 }
 
 .container {
@@ -87,9 +103,10 @@ header {
 }
 
 .box {
-    background-color: rgb(163, 163, 163);
+    background-color: aqua;
+    color: black;
     text-align: center;
-    width: 15rem;
+    width: 14.7rem;
     height: 10rem;
     padding: 1.8rem;
     border: 2px rgb(0, 0, 0) solid;
