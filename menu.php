@@ -62,22 +62,30 @@ function saudacao()
         <h1><?php echo saudacao() . ", " . $nome_usuario; ?>!</h1>
 
     </div>
-    <div class="container">
-        <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)) : ?>
-            <div class="box">
-                <label>Titulo:</label>
-                <td><?php echo $row['titulo']; ?></td>
-                <br><br>
-                <label>Noticia:</label>
-                <br>
-                <td><?php echo $row['noticia']; ?></td>
-                <br><br>
-                <label>Data:</label>
-                <td><?php echo $row['data']; ?></td>
-                <br><br>
-                <a id="primeiro" role="button" href="notcompleta.php">Ver mais</a>
-            </div>
-        <?php endwhile; ?>
+
+    <div class="noticiaspubli">
+
+        <h1>Notícias Publicadas</h1>
+
+        <div class="container">
+            <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)): ?>
+                <div class="box">
+                    <label>Titulo:</label>
+                    <td><?php echo $row['titulo']; ?></td>
+                    <br><br>
+                    <label>Noticia:</label>
+                    <br>
+                    <td><?php echo $row['noticia']; ?></td>
+                    <br><br>
+                    <label>Data:</label>
+                    <td><?php echo $row['data']; ?></td>
+                    <br><br>
+                    <a id="primeiro" role="button" href="notcompleta.php">Ver mais</a>
+                </div>
+            <?php endwhile; ?>
+        </div>
+        <br><br>
+
     </div>
 
 </body>
