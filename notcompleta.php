@@ -95,7 +95,7 @@ $dadoscomentarios = $comentarios->ler();
             <textarea id="comentario" name="comentario" rows="5" cols="33"
                 placeholder="Escreva um comentário"></textarea>
             <br><br>
-            <input type="submit" value="Publicar">
+            <input class="button" type="submit" value="Publicar">
         </form>
 
     </div>

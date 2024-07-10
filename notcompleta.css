@@ -1,5 +1,5 @@
 header {
-    background-color: rgb(60, 214, 21);
+    background-color: #454d6b;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 0;
@@ -12,7 +12,7 @@ header {
 }
 
 .container {
-    background-color: grey;
+    background-color: #454d6b;
     text-align: center;
     width: 400px;
     padding: 60px;
@@ -29,7 +29,7 @@ header {
 }
 
 .container_comentario {
-    background-color: grey;
+    background-color: #454d6b;
     text-align: center;
     width: 400px;
     padding: 60px;
@@ -47,7 +47,7 @@ header {
 }
 
 .container_areacomentarios {
-    background-color: grey;
+    background-color: #454d6b;
     text-align: center;
     width: 500px;
     padding: 60px;
@@ -69,9 +69,8 @@ header {
 }
 
 .button {
-    background-color: rgba(33, 206, 177, 0.89);
+    background-color: #9e0000;
     border: 0;
-    border-radius: 100px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
     box-sizing: border-box;
     color: black;
@@ -93,3 +92,4 @@ header {
     position: absolute;
     transform: translate(-50%, -50%);
 }
+

@@ -1,5 +1,5 @@
 header {
-    background-color: rgb(60, 214, 21);
+    background-color: #454d6b;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 0;
@@ -13,9 +13,9 @@ header {
 
 .button {
     background-color: #9e0000;
+    padding-bottom: 20px;
     border: 0;
-    border-radius: 100px;
-    box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+    box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
     box-sizing: border-box;
     color: black;
     font-family: Quicksand, sans-serif;
@@ -39,11 +39,11 @@ header {
     transform: translate(-50%, -50%);
 }
 
+
 .buttonpublicar {
     background-color: #9e0000;
     border: 0;
-    border-radius: 100px;
-    box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+    box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
     box-sizing: border-box;
     color: black;
     font-family: Quicksand, sans-serif;
@@ -117,4 +117,19 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+a{
+    color: black;
+}
+
+/* ///////////////////////////////// */
+
+
+.card-header {
+    padding-bottom: 20px;
+    opacity: 0.8;
+    color: #fff;
+ background-color: #9e0000;
 }

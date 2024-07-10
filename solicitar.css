@@ -70,6 +70,8 @@ header {
     position: relative;
     max-width: 1000px;
     top: 50%;
+    border: 2px black solid;
+    border-radius: 20px;
 }
 
 .card-header {

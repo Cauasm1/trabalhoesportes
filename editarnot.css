@@ -1,7 +1,7 @@
 header {
-    background-color: rgb(60, 214, 21);
+    background-color: #454d6b;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 8px;
     padding-bottom: 0;
     height: 100px;
     width: 100%;
@@ -18,9 +18,19 @@ header {
     margin: 100px auto;
     background-color: rgba(3, 12, 139, 0.226);
     border: 2px black solid;
-    background-color: rgba(71, 73, 71, 0.671);
+    background-color: #454d6b;
     z-index: 1;
     position: relative;
     max-width: 1000px;
     border-radius: 15px;
+}
+
+textarea {
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+}
+
+.button{
+    background-color: #9e0000;
 }
