@@ -11,14 +11,14 @@ class Usuarios
         $this->conn = $db;
     }
 
-    public function registrar($nome, $email, $senha)
+    public function registrar($nome, $sexo, $fone, $email, $senha)
     {
-        $query = "INSERT INTO " . $this->table_name . " (nome, email, senha) VALUES (?,?,?)";
+        $query = "INSERT INTO " . $this->table_name . " (nome, sexo, fone, email, senha) VALUES (?,?,?,?,?)";
         var_dump($query);
         $stmt = $this->conn->prepare($query);
         var_dump($stmt);
         $hashed_password = password_hash($senha, PASSWORD_BCRYPT);
-        $stmt->execute([$nome, $email, $hashed_password]);
+        $stmt->execute([$nome, $sexo, $fone, $email, $hashed_password]);
         return $stmt;
     }
 
@@ -34,9 +34,9 @@ class Usuarios
         return false;
     }
 
-    public function criar($nome, $email, $senha)
+    public function criar($nome, $sexo, $fone, $email, $senha)
     {
-        return $this->registrar($nome, $email, $senha);
+        return $this->registrar($nome, $sexo, $fone, $email, $senha);
     }
 
    
@@ -49,11 +49,11 @@ class Usuarios
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function atualizar($id, $nome, $email)
+    public function atualizar($id, $nome, $sexo, $fone, $email)
     {
-        $query = "UPDATE " . $this->table_name . " SET nome=?, email=? WHERE id=?";
+        $query = "UPDATE " . $this->table_name . " SET nome=?, sexo=?, fone=?, email=? WHERE id=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$nome, $email, $id]);
+        $stmt->execute([$nome, $sexo, $fone, $email, $id]);
         return $stmt;
     }
 
