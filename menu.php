@@ -80,10 +80,17 @@ function saudacao()
                     <label>Data:</label>
                     <td><?php echo $row['data']; ?></td>
                     <br><br>
-                    <a id="primeiro" role="button" href="notcompleta.php">Ver mais</a>
+                    <a id="primeiro" role="button" href="notcompleta.php?idnot=<?php echo $row['idnot'] ?>">Ver mais</a>
+                    <br><br>
+                    <div>
+                        <span>0</span> <span class="like" onclick="likePost()">like</span>
+                        <span>0</span> <span class="dislike" onclick="dislikePost()">dislike</span>
+                    </div>
+                    <script src="script.js"></script>
                 </div>
             <?php endwhile; ?>
         </div>
+
         <br><br>
 
     </div>

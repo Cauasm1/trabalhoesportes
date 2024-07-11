@@ -40,14 +40,6 @@ class Noticias
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function lerPorIdnot($idnot)
-    {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE idnot=?";
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute([$idnot]);
-        return $stmt;
-    }
-
     public function lerPorIdusu($idusu)
     {
         $query = "SELECT * FROM " . $this->table_name . " WHERE idusu=?";
