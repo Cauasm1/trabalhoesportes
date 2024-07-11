@@ -36,8 +36,6 @@ $dadoscomentarios = $comentarios->ler();
         <h1>NEW SPORTS</h1>
     </header>
 
-    <br><br>
-
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['titulo']) && isset($_POST['noticia'])) {
@@ -95,6 +93,7 @@ $dadoscomentarios = $comentarios->ler();
             <textarea id="comentario" name="comentario" rows="5" cols="33"
                 placeholder="Escreva um comentário"></textarea>
             <br><br>
+            <br>
             <input class="button" type="submit" value="Publicar">
         </form>
 

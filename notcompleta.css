@@ -1,7 +1,7 @@
 header {
     background-color: #454d6b;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 25px;
     padding-bottom: 0;
     height: 100px;
     width: 100%;
@@ -9,6 +9,7 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
+
 }
 
 .container {
@@ -26,6 +27,7 @@ header {
     max-width: 1000px;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 20px;
+    top: 110px;
 }
 
 .container_comentario {
@@ -44,6 +46,7 @@ header {
     align-items: center;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 20px;
+    top: 50px;
 }
 
 .container_areacomentarios {
@@ -70,10 +73,11 @@ header {
 
 .button {
     background-color: #9e0000;
-    border: 0;
+    border: 2px black solid;
+    border-radius: 20px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
     box-sizing: border-box;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: Quicksand, sans-serif;
     font-size: 15px;
     justify-content: center;
@@ -93,3 +97,8 @@ header {
     transform: translate(-50%, -50%);
 }
 
+textarea {
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+}

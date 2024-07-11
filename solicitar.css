@@ -77,20 +77,13 @@ header {
 .card-header {
     padding-bottom: 20px;
     opacity: 0.8;
-    color: #fff;
+    color: #000000;
  background-color: #9e0000;
-
+ min-width: 90px;
+ padding: 8px;
+ border-radius: 20px;
 }
 
-.card-header::after {
-    content: "";
-    width: 70px;
-    height: 1px;
-    display: block;
-    margin-top: -17px;
-    margin-left: -5px;
-
-}
 
 a{
     color: black;

@@ -86,9 +86,11 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
                     <label>Data:</label>
                     <td><?php echo $row['data']; ?></td>
                     <br><br><br>
-                    <a class="button" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
-                    <br><br>
-                    <a class="button" href="editarnot.php?idnot=<?php echo $row['idnot'] ?>">Editar</a>
+                    <a class="botao" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
+                    <br>
+                    <br>
+                    <br>
+                    <a class="botao" href="editarnot.php?idnot=<?php echo $row['idnot'] ?>">Editar</a>
                 </div>
             <?php endwhile; ?>
         </div>

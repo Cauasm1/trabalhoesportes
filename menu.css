@@ -14,10 +14,11 @@ header {
 .button {
     background-color: #9e0000;
     padding-bottom: 20px;
-    border: 0;
+    border: 2px black solid;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
     box-sizing: border-box;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: Quicksand, sans-serif;
     font-size: 15px;
     justify-content: center;
@@ -42,10 +43,11 @@ header {
 
 .buttonpublicar {
     background-color: #9e0000;
-    border: 0;
+    border: 2px black solid;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
     box-sizing: border-box;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: Quicksand, sans-serif;
     font-size: 15px;
     justify-content: center;
@@ -68,6 +70,7 @@ header {
 }
 
 .saudacao {
+    background-color: #454d6b;
     text-align: center;
     width: 500px;
     padding: 10px;
@@ -77,7 +80,7 @@ header {
     max-width: 10000px;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 20px;
-    top: 20px;
+    top: 35px;
 }
 
 .noticiaspubli {
