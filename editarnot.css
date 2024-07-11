@@ -28,9 +28,12 @@ header {
 textarea {
     padding: 30px;
     border-radius: 5px;
-    border: 2px solid #000000;
+    border: 2px solid black;
 }
 
 .button{
     background-color: #9e0000;
+    min-width: 90px;
+    padding: 8px;
+    border-radius: 20px;
 }
