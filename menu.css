@@ -119,8 +119,17 @@ header {
     white-space: nowrap;
 }
 
+.like {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
 
-a{
+.dislike {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+a {
     color: black;
 }
 
@@ -131,5 +140,5 @@ a{
     padding-bottom: 20px;
     opacity: 0.8;
     color: #fff;
- background-color: #9e0000;
+    background-color: #9e0000;
 }

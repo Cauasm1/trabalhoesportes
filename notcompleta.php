@@ -13,7 +13,10 @@ if (!isset($_SESSION['usuario_id'])) {
 
 $noticias = new Noticias($db);
 
-$dados = $noticias->lerPorIdusu($_SESSION['usuario_id']);
+if (isset($_GET['idnot'])) {
+    $idnot = $_GET['idnot'];
+    $row = $noticias->lerPorId($idnot);
+}
 
 $comentarios = new Comentarios($db);
 
@@ -54,21 +57,18 @@ $dadoscomentarios = $comentarios->ler();
     ?>
 
     <div class="container">
-        <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)): ?>
-            <div class="box">
-                <label>Titulo:</label>
-                <td><?php echo $row['titulo']; ?></td>
-                <br><br>
-                <label>Noticia:</label>
-                <br>
-                <td><?php echo $row['noticia']; ?></td>
-                <br><br>
-                <label>Data:</label>
-                <td><?php echo $row['data']; ?></td>
-            </div>
-        <?php endwhile; ?>
+        <div class="box">
+            <label>Titulo:</label>
+            <td><?php echo $row['titulo']; ?></td>
+            <br><br>
+            <label>Noticia:</label>
+            <br>
+            <td><?php echo $row['noticia']; ?></td>
+            <br><br>
+            <label>Data:</label>
+            <td><?php echo $row['data']; ?></td>
+        </div>
     </div>
-
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
