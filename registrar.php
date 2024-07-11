@@ -5,9 +5,11 @@ include_once "./classes/Usuarios.php";
 if($_SERVER['REQUEST_METHOD']==='POST'){
     $usuario = new Usuarios($db);
     $nome = $_POST['nome'];
+    $sexo = $_POST['sexo'];
+    $fone = $_POST['fone'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $usuario->registrar($nome, $email, $senha);
+    $usuario->registrar($nome, $sexo, $fone, $email, $senha);
     header("Location: login.php");
     exit();
 }
@@ -30,6 +32,15 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <h1>Registrar-se</h1>
     <form method ="POST">
         <input type = "text" name = "nome" placeholder= "nome" required>
+        <br>
+        <br>
+        <laber>Masculino</laber>
+        <input type = "radio" name = "sexo" value = "M" required>
+        <label>Feminino</label>
+        <input type = "radio" name = "sexo" value = "F" required>
+        <br>
+        <br>
+        <input type = "text" name = "fone" placeholder= "fone" required>
         <br>
         <br>
         <input type = "text" name = "email" placeholder= "email" required>
