@@ -1,7 +1,7 @@
 header {
     background-color: #454d6b;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 5px;
     padding-bottom: 0;
     height: 100px;
     width: 100%;
@@ -27,7 +27,7 @@ header {
     max-width: 1000px;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 20px;
-    top: 110px;
+    top: 120px;
 }
 
 .container_comentario {
@@ -46,7 +46,7 @@ header {
     align-items: center;
     border: 2px rgb(0, 0, 0) solid;
     border-radius: 20px;
-    top: 50px;
+    top: 60px;
 }
 
 .container_areacomentarios {

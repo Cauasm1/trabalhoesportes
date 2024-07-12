@@ -1,6 +1,6 @@
-/* 
+
 header {
-    background-color: rgb(60, 214, 21);
+    background-color: #454d6b;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 0;
@@ -12,86 +12,12 @@ header {
     z-index: 2;
 }
 
-html{
-    background-color: aqua;
-}
-
-
- .header {
-    text-align: center;
-    padding-top: 5px;
-    background-color: rgba(255, 255, 255, 0.452);
-    top: 0;
-    left: 0;
-    padding-bottom: 0;
-   height: 100px; 
-   width: 100%;
- }
-
-
-.container-star{
-
-    text-align: center;
-    width: 400px;
-    padding: 45px;
-    margin: 100px auto;
-    border: 2px black solid; 
-    background-color: rgb(3, 12, 139);
-    z-index: 1;
-    position: relative;
-    max-width: 1000px;
-    border-radius: 15px;
-
-
-}
-
-.button{
-    background-color: rgb(0, 0, 0);
-    border: 0;
-    border-radius: 100px;
-    box-shadow: white;
-    text-decoration: none;
-    color: white;
-    margin-bottom: 6px;
-    padding: 8px;
-}
-
-.rodape{
-    text-align: center;
-    box-shadow: 0px 0px 0px rgb(0, 0, 0);
-    height: 100px;
-    padding-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.253);
-    width: 100%;
-    padding-top: 10px;
-    z-index: 2;
-    left: 0;
-    bottom: 0;
-}
- */
-
- body {
-    padding: 0;
-    margin: 0;
-    background-color: #454d6b;
-
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-}
-
 .container{
+    background-color: #454d6b;
     text-align: center;
     width: 400px;
     padding: 30px;
     margin: 100px auto;
-    background-color: rgba(19, 19, 19, 0.3);
     z-index: 1;
     position: relative;
     max-width: 1000px;

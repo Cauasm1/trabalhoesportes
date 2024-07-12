@@ -31,6 +31,9 @@ $mensagem = 'E-mail não encontrado.';
     <h1>NEW SPORTS</h1>
     </header>
 
+    <br>
+    <br>
+    
     <div class="container">
 <h1>Recuperar Senha</h1>
 <form method="POST">

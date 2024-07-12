@@ -10,33 +10,30 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
+
 }
 
 .container{
     background-color: #454d6b;
     text-align: center;
     width: 400px;
-    padding: 30px;
-    margin: 100px auto;
+    padding: 7px;
+    margin: 90px auto;
     z-index: 1;
     position: relative;
     max-width: 1000px;
-    top: 50%;
+    top: 60%;
     border: 2px black solid;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
-.card-header {
+.botaoditar{
     padding-bottom: 20px;
     opacity: 0.8;
     color: #000000;
  background-color: #9e0000;
  min-width: 90px;
- padding: 8px;
- border-radius: 20px;
-}
-
-
-a{
-    color: black;
+    padding: 8px;
+    border-radius: 20px;
+ 
 }

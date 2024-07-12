@@ -28,6 +28,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <header>
     <h1>NEW SPORTS</h1>
     </header>
+
+    <br>
+    <br>
+
     <main class="container">
     <h1>Registrar-se</h1>
     <form method ="POST">
