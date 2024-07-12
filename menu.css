@@ -122,14 +122,17 @@ header {
     white-space: nowrap;
 }
 
-.like {
-    font-size: 1.2rem;
-    margin-top: 5px;
+.item {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-.dislike {
-    font-size: 1.2rem;
-    margin-top: 5px;
+.buttons {
+    margin-top: 10px;
+}
+
+.botao {
+    margin-right: 10px;
 }
 
 a {
@@ -137,7 +140,6 @@ a {
 }
 
 /* ///////////////////////////////// */
-
 
 .card-header {
     padding-bottom: 20px;

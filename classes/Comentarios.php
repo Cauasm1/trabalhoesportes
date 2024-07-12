@@ -40,11 +40,11 @@ class Comentarios
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function atualizar($id, $nome, $email, $comentario, $data_envio)
+    public function atualizar($id, $comentario, $data_envio)
     {
-        $query = "UPDATE " . $this->table_name . " SET nome=?, email=?, comentario=?, data_envio=? WHERE id=?";
+        $query = "UPDATE " . $this->table_name . " SET comentario=?, data_envio=? WHERE id=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$nome, $email, $comentario, $data_envio, $id]);
+        $stmt->execute([$comentario, $data_envio, $id]);
         return $stmt;
     }
 
