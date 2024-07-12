@@ -1,27 +1,25 @@
 
 
- body {
-    padding: 0;
-    margin: 0;
+header{
     background-color: #454d6b;
-
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 18vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
+
 
 .container{
     text-align: center;
+    background-color: #454d6b;
     width: 400px;
     padding: 7px;
     margin: 100px auto;
-    background-color: rgba(19, 19, 19, 0.3);
     z-index: 1;
     position: relative;
     max-width: 1000px;

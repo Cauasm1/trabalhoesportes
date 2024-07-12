@@ -11,6 +11,7 @@ header {
     z-index: 2;
 }
 
+
 .button {
     background-color: #9e0000;
     padding-bottom: 20px;
@@ -36,7 +37,7 @@ header {
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 95%;
     transform: translate(-50%, -50%);
 }
 
@@ -65,7 +66,35 @@ header {
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.buttoneditar {
+    background-color: #9e0000;
+    border: 2px black solid;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 90px;
+    padding: 8px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
 }
 
@@ -145,3 +174,4 @@ a {
     color: #fff;
     background-color: #9e0000;
 }
+

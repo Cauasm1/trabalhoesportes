@@ -44,12 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>NEW SPORTS</h1>
     </header>
 
+    <br>
+    <br>
+
     <div class="img">
         <div class="container">
             <h1>Login</h1>
             <form method="POST">
             <div class="card-content-area">
-                <input type="email" name="email" placeholder="insira o email" required>
+                <input type="email" name="email" placeholder="Insira o email" required>
                 <br>
                 <br>
                 <input type="password" name="senha" placeholder="Insira sua senha" required>

@@ -8,7 +8,7 @@ $nova_senha = $_POST['nova_senha'];
 $usuario = new Usuarios($db);
 if ($usuario->redefinirSenha($codigo, $nova_senha)) {
 $mensagem = 'Senha redefinida com sucesso. Você pode <a
-href="index.php">entrar</a> agora.';
+href="login.php">entrar</a> agora.';
 } else {
 $mensagem = 'Código de verificação inválido.';
 }
@@ -28,6 +28,10 @@ $mensagem = 'Código de verificação inválido.';
 <header>
     <h1>NEW SPORTS</h1>
     </header>
+
+    <br>
+    <br>
+
     <div class="container">
 <h1>Redefinir Senha</h1>
 <form method="POST">
