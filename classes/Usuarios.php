@@ -39,7 +39,6 @@ class Usuarios
         return $this->registrar($nome, $sexo, $fone, $email, $senha);
     }
 
-   
 
     public function lerPorId($id)
     {
