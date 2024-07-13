@@ -95,6 +95,8 @@ $dadoscomentarios = $comentarios->ler();
             <br><br>
             <br>
             <input class="button" type="submit" value="Publicar">
+            <br><br><br>
+            <a class="button" type="submit" href="menu.php">Voltar</a>
         </form>
 
     </div>

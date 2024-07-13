@@ -51,7 +51,8 @@ function saudacao()
         <br>
 
         <navigation>
-            <a id="primeiro" class="buttoneditar" role="button" href="editar.php?id=<?php echo $_SESSION['usuario_id']; ?>">Conta</a>
+            <a id="primeiro" class="buttoneditar" role="button"
+                href="editar.php?id=<?php echo $_SESSION['usuario_id']; ?>">Conta</a>
             <a id="primeiro" class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
             <a id="primeiro" class="button" role="button" href="login.php">Login</a>
         </navigation>
@@ -69,7 +70,7 @@ function saudacao()
         <h1>Notícias Publicadas</h1>
 
         <div class="container">
-            <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)) : ?>
+            <?php while ($row = $dados->fetch(PDO::FETCH_ASSOC)): ?>
                 <div class="box">
                     <label>Titulo:</label>
                     <td><?php echo $row['titulo']; ?></td>
@@ -82,9 +83,6 @@ function saudacao()
                     <td><?php echo $row['data']; ?></td>
                     <br><br>
                     <a id="primeiro" role="button" href="notcompleta.php?idnot=<?php echo $row['idnot'] ?>">Ver mais</a>
-                    <br>
-                    
-                    <script src="script.js"></script>
                 </div>
             <?php endwhile; ?>
         </div>

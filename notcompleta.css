@@ -77,7 +77,6 @@ header {
     border-radius: 20px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
     box-sizing: border-box;
-    color: rgb(255, 255, 255);
     font-family: Quicksand, sans-serif;
     font-size: 15px;
     justify-content: center;
@@ -95,6 +94,7 @@ header {
     display: inline-block;
     position: absolute;
     transform: translate(-50%, -50%);
+    color: #000000;
 }
 
 textarea {

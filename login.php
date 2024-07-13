@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <header>
-    <h1>NEW SPORTS</h1>
+        <h1>NEW SPORTS</h1>
     </header>
 
     <br>
@@ -51,18 +51,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container">
             <h1>Login</h1>
             <form method="POST">
-            <div class="card-content-area">
-                <input type="email" name="email" placeholder="Insira o email" required>
-                <br>
-                <br>
-                <input type="password" name="senha" placeholder="Insira sua senha" required>
-                <br>
-                <br>
-                
-                <button type="submit" class="card-header" type="button">Login</button>
-            </div>
-                <p><a href="./registrar.php">cadastre-se </a> </p>
-                <p><a href="./solicitar_senha.php">recuperar senha</a> </p>
+                <div class="card-content-area">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" placeholder="Insira seu email" required>
+                    <br>
+                    <br>
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" placeholder="Insira sua senha" required>
+                    <br>
+                    <br>
+
+                    <button type="submit" class="card-header" type="button">Login</button>
+                </div>
+                <p>Cadastre-se aqui: <a href="./registrar.php">Cadastre-se</a></p>
+                <p>Esqueceu sua senha? <a href="./solicitar_senha.php">Recuperar Senha</a></p>
 
                 <br>
                 <br>
