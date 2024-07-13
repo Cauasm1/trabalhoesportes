@@ -72,9 +72,10 @@ if(isset($_GET['id'])){
                 <br>
                 <br>
                 <br>
-                <!-- <input type="submit" value="Atualizar"> -->
                 <button class="botaoditar" type="submit">Editar</button>
-
+                <br><br><br>
+                <a class="button" href="menu.php">Voltar</a>
+                <br><br>
         </label>
 </form>
 </div>
