@@ -3,6 +3,7 @@ session_start();
 include_once './config/config.php';
 include_once './classes/Noticias.php';
 
+
 date_default_timezone_set('America/Sao_Paulo');
 
 if (!isset($_SESSION['usuario_id'])) {
@@ -41,10 +42,19 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
         <form method="POST">
             <label for="noticia">Escreva uma notícia:</label>
             <br><br>
-
             <label for="titulo">Titulo:</label>
             <input type="text" name="titulo">
             <br><br>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome da Imagem:</label>
+                <input type="text" name="nome" id="nome" required><br><br>
+                <label for="imagem">Escolha a Imagem:</label>
+                <br>
+                <br>
+                <input type="file" name="imagem" id="imagem" required><br><br>              
+            </form>
+            <br>
+            <br>
             <textarea id="noticia" name="noticia" rows="5" cols="33" placeholder="Escreva uma notícia"></textarea>
             <br><br><br>
             <input class="button" type="submit" value="Publicar">
@@ -74,7 +84,7 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
         <h1>Suas Notícias Publicadas</h1>
 
         <div class="container_box">
-            <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)): ?>
+            <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)) : ?>
                 <div class="box">
                     <label>Titulo:</label>
                     <td><?php echo $row['titulo']; ?></td>
