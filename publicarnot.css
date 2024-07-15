@@ -25,7 +25,7 @@ header {
     display: flexbox;
     z-index: 1;
     max-width: 1000px;
-    
+
 }
 
 textarea {
@@ -61,7 +61,7 @@ textarea {
     transform: translate(-50%, -50%);
 }
 
-.botao{
+.botao {
     background-color: rgb(236, 70, 70);
     border: 2px black solid;
     border-radius: 20px;
@@ -127,3 +127,136 @@ textarea {
     white-space: nowrap;
 }
 
+@media only screen and (max-device-width: 700px) {
+    header {
+        background-color: #454d6b;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 0;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+
+    
+    .container {
+        background-color: #454d6b;
+        text-align: center;
+        width: 300px;
+        padding: 30px;
+        margin: 100px auto;
+        border: 2px rgb(0, 0, 0) solid;
+        border-radius: 20px;
+        max-width: 500px;
+        position: relative;
+        line-break: anywhere;
+        display: flexbox;
+        z-index: 1;
+        max-width: 1000px;
+
+    }
+
+    textarea {
+        padding: 8px;
+        border-radius: 5px;
+        border: 2px solid #000000;
+    }
+
+    .button {
+        background-color: #9e0000;
+        border: 2px black solid;
+        border-radius: 20px;
+        box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+        box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+        box-sizing: border-box;
+        color: rgb(0, 0, 0);
+        font-family: Quicksand, sans-serif;
+        font-size: 15px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 90px;
+        padding: 8px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        margin-bottom: 15px;
+        display: inline-block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .botao {
+        background-color: rgb(236, 70, 70);
+        border: 2px black solid;
+        border-radius: 20px;
+        box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+        box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+        box-sizing: border-box;
+        color: rgb(0, 0, 0);
+        font-family: Quicksand, sans-serif;
+        font-size: 15px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 90px;
+        padding: 8px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        margin-bottom: 15px;
+        display: inline-block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .noticiaspubli {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSJXlBHuuq5LZwgQJbfSw5EfpG5hIov_sIw&s);
+        text-align: center;
+        border: 2px rgb(0, 0, 0) solid;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .noticiaspubli h1 {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        font-size: 50px;
+    }
+
+    .container_box {
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        display: flex;
+        padding: 20px;
+    }
+
+    .box {
+        background-color: aqua;
+        color: black;
+        text-align: center;
+        width: 14.7rem;
+        height: 12rem;
+        padding: 1.8rem;
+        border: 2px rgb(0, 0, 0) solid;
+        border-radius: 20px;
+        margin-left: 20px;
+        line-break: anywhere;
+        max-width: 30ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

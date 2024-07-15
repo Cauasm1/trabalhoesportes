@@ -47,7 +47,8 @@ $dadoscomentarios = $comentarios->ler();
             $data = date("Y-m-d");
             $titulo = $_POST['titulo'];
             $noticia = $_POST['noticia'];
-            $noticias->registrar($idusu, $data, $titulo, $noticia);
+            $caminho = $_POST['caminho'];
+            $noticias->registrar($idusu, $data, $titulo, $noticia, $caminho);
             header('Location: menu.php');
             exit();
         }

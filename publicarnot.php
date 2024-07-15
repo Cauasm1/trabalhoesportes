@@ -17,6 +17,42 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
 
 ?>
 
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (isset($_POST['titulo']) && isset($_POST['noticia'])) {
+        $noticias = new Noticias($db);
+        $idusu = $_SESSION['usuario_id'];
+        $data = date("Y-m-d");
+        $titulo = $_POST['titulo'];
+        $noticia = $_POST['noticia'];
+        $imagem = $_FILES['imagem'];
+        // Verificar se houve erro no upload
+        if ($imagem['error'] === UPLOAD_ERR_OK) {
+            $extensao = pathinfo($imagem['name'], PATHINFO_EXTENSION);
+            $nomeArquivo = uniqid() . '.' . $extensao;
+            $caminhoArquivo = 'uploads/' . $nomeArquivo;
+
+            // Mover o arquivo para a pasta de uploads
+            if (move_uploaded_file($imagem['tmp_name'], $caminhoArquivo)) {
+                // Salvar o caminho no banco de dados
+                $noticias->registrar($idusu, $data, $titulo, $noticia, $caminhoArquivo);
+                header('Location: menu.php');
+                exit();
+                
+            } else {
+                echo "Erro ao mover o arquivo.";
+            }
+        } else {
+            echo "Erro no upload: " . $imagem['error'];
+        }
+} else {
+echo "Método de requisição inválido.";
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,21 +74,21 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
     <div class="container">
 
         <h1>Cadastro de Notícias:</h1>
-
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <label for="noticia">Escreva uma notícia:</label>
             <br><br>
-            <label for="titulo">Titulo:</label>
+            <label for="titulo">Titulo</label>
+            <br>
             <input type="text" name="titulo">
             <br><br>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <label for="nome">Nome da Imagem:</label>
-                <input type="text" name="nome" id="nome" required><br><br>
-                <label for="imagem">Escolha a Imagem:</label>
-                <br>
-                <br>
-                <input type="file" name="imagem" id="imagem" required><br><br>              
-            </form>
+
+            <label for="nome">Nome da Imagem</label>
+            <br>
+            <input type="text" name="nome" id="nome" required><br><br>
+            <label for="imagem">Escolha a Imagem</label>
+            <br>
+            <br>
+            <input type="file" name="imagem" id="imagem" required><br><br>
             <br>
             <br>
             <textarea id="noticia" name="noticia" rows="5" cols="33" placeholder="Escreva uma notícia"></textarea>
@@ -64,20 +100,7 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
 
     </div>
 
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['titulo']) && isset($_POST['noticia'])) {
-            $noticias = new Noticias($db);
-            $idusu = $_SESSION['usuario_id'];
-            $data = date("Y-m-d");
-            $titulo = $_POST['titulo'];
-            $noticia = $_POST['noticia'];
-            $noticias->registrar($idusu, $data, $titulo, $noticia);
-            header('Location: menu.php');
-            exit();
-        }
-    }
-    ?>
+
 
     <div class="noticiaspubli">
 
@@ -95,9 +118,9 @@ $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
                     <br><br>
                     <label>Data:</label>
                     <td><?php echo $row['data']; ?></td>
-                    <br><br><br>
-                    <a class="botao" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
                     <br>
+                    <br>
+                    <a class="botao" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
                     <br>
                     <br>
                     <a class="botao" href="editarnot.php?idnot=<?php echo $row['idnot'] ?>">Editar</a>
