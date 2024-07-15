@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $idusu = $_POST['idusu'];
     $titulo = $_POST['titulo'];
     $noticia = $_POST['noticia'];
-    $noticias->atualizar($idnot, $idusu, $titulo, $noticia);
+    $caminho = $_POST['caminho'];
+    $noticias->atualizar($idnot, $idusu, $titulo, $noticia, $caminho);
     header('Location: menu.php');
     exit();
 }

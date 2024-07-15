@@ -11,17 +11,17 @@ class Noticias
         $this->conn = $db;
     }
 
-    public function registrar($idusu, $data, $titulo, $noticia)
+    public function registrar($idusu, $data, $titulo, $noticia,$caminho)
     {
-        $query = "INSERT INTO " . $this->table_name . " (idusu, data, titulo, noticia) VALUES (?,?,?,?)";
+        $query = "INSERT INTO " . $this->table_name . " (idusu, data, titulo, noticia, caminho) VALUES (?,?,?,?,?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$idusu, $data, $titulo, $noticia]);
+        $stmt->execute([$idusu, $data, $titulo, $noticia, $caminho]);
         return $stmt;
     }
 
-    public function criar($idusu, $data, $titulo, $noticia)
+    public function criar($idusu, $data, $titulo, $noticia,$caminho)
     {
-        return $this->registrar($idusu, $data, $titulo, $noticia);
+        return $this->registrar($idusu, $data, $titulo, $noticia, $caminho);
     }
 
     public function ler()
@@ -48,11 +48,11 @@ class Noticias
         return $stmt;
     }
 
-    public function atualizar($idnot, $idusu, $titulo, $noticia)
+    public function atualizar( $idusu, $titulo, $noticia, $caminho, $idnot)
     {
-        $query = "UPDATE " . $this->table_name . " SET idusu=?, titulo=?, noticia=? WHERE idnot=?";
+        $query = "UPDATE " . $this->table_name . " SET idusu=?, titulo=?, noticia=?, caminho=? WHERE idnot=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$idusu, $titulo, $noticia, $idnot]);
+        $stmt->execute([$idusu, $titulo, $noticia,$caminho, $idnot]);
         return $stmt;
     }
 
