@@ -53,8 +53,8 @@ function saudacao()
         <navigation>
             <a id="primeiro" class="buttoneditar" role="button"
                 href="editar.php?id=<?php echo $_SESSION['usuario_id']; ?>">Conta</a>
-            <a id="primeiro" class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
-            <a id="primeiro" class="button" role="button" href="login.php">Login</a>
+            <a class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
+            <a class="button" role="button" href="logout.php">Logout</a>
         </navigation>
 
     </header>

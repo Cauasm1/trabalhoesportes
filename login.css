@@ -41,3 +41,47 @@ header {
 a {
     color: rgb(19, 43, 177);
 }
+
+@media only screen and (max-device-width: 700px) {
+    header {
+        background-color: #454d6b;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 0;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .container {
+        text-align: center;
+        background-color: #454d6b;
+        width: 320px;
+        padding: 7px;
+        margin: 100px auto;
+        z-index: 1;
+        position: relative;
+        max-width: 1000px;
+        top: 40%;
+        border: 2px black solid;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+    }
+
+    .card-header {
+        padding-bottom: 20px;
+        opacity: 0.8;
+        color: #000000;
+        background-color: #9e0000;
+        min-width: 90px;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    a {
+        color: rgb(19, 43, 177);
+    }
+}

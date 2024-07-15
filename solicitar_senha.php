@@ -39,7 +39,7 @@ redefinir sua senha.";
         <h1>Recuperar Senha</h1>
         <form method="POST">
             <label for="email">Email:</label>
-            <input type="email" name="email" required><br><br>
+            <input type="email" name="email" required placeholder="Insira seu email"><br><br>
             <button class="card-header">Enviar</button>
 
         </form>
