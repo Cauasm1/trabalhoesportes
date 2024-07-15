@@ -61,3 +61,69 @@ header {
     transform: translate(-50%, -50%);
     color: #000000;
 }
+
+@media only screen and (max-device-width: 700px) {
+    header {
+        background-color: #454d6b;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 0;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        font-size: 17px;
+    }
+
+    .container {
+        background-color: #454d6b;
+        text-align: center;
+        width: 360px;
+        padding: 7px;
+        margin: 90px auto;
+        z-index: 1;
+        position: relative;
+        max-width: 1000px;
+        top: 60%;
+        border: 2px black solid;
+        border-radius: 30px;
+    }
+
+    .botaoditar {
+        padding-bottom: 20px;
+        opacity: 0.8;
+        color: #000000;
+        background-color: #9e0000;
+        min-width: 90px;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    .button {
+        background-color: #9e0000;
+        border: 2px black solid;
+        border-radius: 20px;
+        box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
+        box-sizing: border-box;
+        font-family: Quicksand, sans-serif;
+        font-size: 15px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 90px;
+        padding: 8px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        margin-bottom: 15px;
+        display: inline-block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: #000000;
+    }
+}
