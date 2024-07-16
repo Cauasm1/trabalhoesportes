@@ -62,6 +62,10 @@ $dadoscomentarios = $comentarios->ler();
             <label>Titulo:</label>
             <td><?php echo $row['titulo']; ?></td>
             <br><br>
+            <label>Imagem:</label>
+            <br><br>
+            <td><?php echo ' <img src=' . $row['caminho'] . '>'; ?></td>
+            <br><br>
             <label>Noticia:</label>
             <br>
             <td><?php echo $row['noticia']; ?></td>
@@ -95,8 +99,8 @@ $dadoscomentarios = $comentarios->ler();
             <br><br>
             <textarea id="comentario" name="comentario" rows="5" cols="33"
                 placeholder="Escreva um comentário"></textarea>
-            <br><br>
-            
+            <br>
+            <br>
             <br>
             <input class="button" type="submit" value="Publicar">
             <br><br><br>

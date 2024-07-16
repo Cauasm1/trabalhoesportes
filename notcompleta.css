@@ -30,6 +30,10 @@ header {
     top: 120px;
 }
 
+img {
+    width: 200px;
+}
+
 .container_comentario {
     background-color: #454d6b;
     text-align: center;
@@ -115,9 +119,9 @@ textarea {
         top: 0;
         left: 0;
         z-index: 2;
-    
+
     }
-    
+
     .container {
         background-color: #454d6b;
         text-align: center;
@@ -135,7 +139,7 @@ textarea {
         border-radius: 20px;
         top: 120px;
     }
-    
+
     .container_comentario {
         background-color: #454d6b;
         text-align: center;
@@ -154,7 +158,7 @@ textarea {
         border-radius: 20px;
         top: 60px;
     }
-    
+
     .container_areacomentarios {
         background-color: #454d6b;
         text-align: center;
@@ -171,12 +175,12 @@ textarea {
         border: 2px rgb(0, 0, 0) solid;
         border-radius: 20px;
     }
-    
+
     .box_comentarios {
         border: 2px rgb(0, 0, 0) solid;
         border-radius: 20px;
     }
-    
+
     .button {
         background-color: #9e0000;
         border: 2px black solid;
@@ -202,7 +206,7 @@ textarea {
         transform: translate(-50%, -50%);
         color: #000000;
     }
-    
+
     textarea {
         padding: 30px;
         border-radius: 5px;

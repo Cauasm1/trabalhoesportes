@@ -53,10 +53,18 @@ if (isset($_GET['idnot'])) {
             <input type="hidden" name="idusu" value="<?php echo $row['idusu'] ?>" required>
             <label for="titulo">Titulo:</label>
             <input type="text" name="titulo" value="<?php echo $row['titulo'] ?>" required>
-            <br><br>
+            <br>
+            <br>
+            <label for="imagem">Escolha a Imagem</label>
+            <br>
+            <br>
+            <input type="file" name="imagem" id="caminho" required>
+            <br>
+            <br>
             <label for="noticia">Noticia:</label>
             <br><br>
-            <textarea type="text" name="noticia" required rows="5" cols="33" placeholder="Escreva uma notícia"><?php echo $row['noticia'] ?></textarea>
+            <textarea type="text" name="noticia" required rows="5" cols="33"
+                placeholder="Escreva uma notícia"><?php echo $row['noticia'] ?></textarea>
             <br><br>
             <input class="button" type="submit" value="Atualizar">
         </form>
