@@ -16,8 +16,6 @@ $noticias = new Noticias($db);
 $dadosnot = $noticias->lerPorIdusu($_SESSION['usuario_id']);
 
 ?>
-
-
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -28,28 +26,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $titulo = $_POST['titulo'];
         $noticia = $_POST['noticia'];
         $imagem = $_FILES['imagem'];
-        // Verificar se houve erro no upload
+
         if ($imagem['error'] === UPLOAD_ERR_OK) {
             $extensao = pathinfo($imagem['name'], PATHINFO_EXTENSION);
             $nomeArquivo = uniqid() . '.' . $extensao;
             $caminhoArquivo = 'uploads/' . $nomeArquivo;
 
-            // Mover o arquivo para a pasta de uploads
             if (move_uploaded_file($imagem['tmp_name'], $caminhoArquivo)) {
-                // Salvar o caminho no banco de dados
                 $noticias->registrar($idusu, $data, $titulo, $noticia, $caminhoArquivo);
                 header('Location: menu.php');
                 exit();
-                
+
             } else {
                 echo "Erro ao mover o arquivo.";
             }
         } else {
             echo "Erro no upload: " . $imagem['error'];
         }
-} else {
-echo "Método de requisição inválido.";
-}
+    } else {
+        echo "Método de requisição inválido.";
+    }
 }
 ?>
 
@@ -76,15 +72,18 @@ echo "Método de requisição inválido.";
         <h1>Cadastro de Notícias:</h1>
         <form method="POST" enctype="multipart/form-data">
             <label for="noticia">Escreva uma notícia:</label>
-            <br><br>
+            <br>
+            <br>
             <label for="titulo">Titulo</label>
             <br>
             <input type="text" name="titulo">
-            <br><br>
-
+            <br>
+            <br>
             <label for="nome">Nome da Imagem</label>
             <br>
-            <input type="text" name="nome" id="nome" required><br><br>
+            <input type="text" name="nome" id="nome" required>
+            <br>
+            <br>
             <label for="imagem">Escolha a Imagem</label>
             <br>
             <br>
@@ -92,7 +91,9 @@ echo "Método de requisição inválido.";
             <br>
             <br>
             <textarea id="noticia" name="noticia" rows="5" cols="33" placeholder="Escreva uma notícia"></textarea>
-            <br><br><br>
+            <br>
+            <br>
+            <br>
             <input class="button" type="submit" value="Publicar">
             <br><br><br>
             <a class="button" href="menu.php">Voltar</a>
@@ -107,7 +108,7 @@ echo "Método de requisição inválido.";
         <h1>Suas Notícias Publicadas</h1>
 
         <div class="container_box">
-            <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)) : ?>
+            <?php while ($row = $dadosnot->fetch(PDO::FETCH_ASSOC)): ?>
                 <div class="box">
                     <label>Titulo:</label>
                     <td><?php echo $row['titulo']; ?></td>
@@ -120,7 +121,9 @@ echo "Método de requisição inválido.";
                     <td><?php echo $row['data']; ?></td>
                     <br>
                     <br>
+                    <br>
                     <a class="botao" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
+                    <br>
                     <br>
                     <br>
                     <a class="botao" href="editarnot.php?idnot=<?php echo $row['idnot'] ?>">Editar</a>
