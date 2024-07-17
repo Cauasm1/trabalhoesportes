@@ -18,6 +18,7 @@ header {
     margin: 100px auto;
     background-color: rgba(3, 12, 139, 0.226);
     border: 2px black solid;
+    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
     background-color: #454d6b;
     z-index: 1;
     position: relative;

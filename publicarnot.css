@@ -117,6 +117,7 @@ textarea {
     height: 12.5rem;
     padding: 1.8rem;
     border: 2px rgb(0, 0, 0) solid;
+    box-shadow: rgba(177, 240, 6, 0.849)  10px 10px;
     border-radius: 20px;
     margin-left: 20px;
     line-break: anywhere;
