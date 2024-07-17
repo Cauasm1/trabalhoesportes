@@ -23,7 +23,7 @@ header {
     top: 40%;
     border: 2px black solid;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
 }
 
 .card-header {
@@ -34,7 +34,6 @@ header {
     min-width: 90px;
     padding: 8px;
     border-radius: 20px;
-
 
 }
 
@@ -68,7 +67,7 @@ a {
         top: 40%;
         border: 2px black solid;
         border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+        box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
     }
 
     .card-header {
