@@ -23,6 +23,8 @@ header {
     top: 50%;
     border: 2px black solid;
     border-radius: 20px;
+    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+
 }
 
 .card-header {
@@ -61,7 +63,7 @@ a {
     .container {
         background-color: #454d6b;
         text-align: center;
-        width: 490px;
+        width: 400px;
         padding: 180px;
         margin: 300px auto;
         z-index: 2;
@@ -70,7 +72,7 @@ a {
         top: 50%;
         border: 2px black solid;
         border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.671) 0 8px 12px;
+        box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
     }
 
     .card-header {

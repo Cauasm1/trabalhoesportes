@@ -65,6 +65,7 @@ header {
     position: relative;
     max-width: 10000px;
     border: 2px rgb(0, 0, 0) solid;
+    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
     border-radius: 20px;
     top: 35px;
 }
@@ -89,6 +90,7 @@ header {
     flex-wrap: wrap;
     gap: 0.8rem;
     display: flex;
+    
 }
 
 .box {
@@ -99,6 +101,7 @@ header {
     height: 10rem;
     padding: 1.8rem;
     border: 2px rgb(0, 0, 0) solid;
+    box-shadow: rgba(177, 240, 6, 0.849)  10px 10px;
     border-radius: 20px;
     margin-left: 20px;
     line-break: anywhere;
@@ -238,7 +241,7 @@ a {
     .saudacao {
         background-color: #454d6b;
         text-align: center;
-        width: 350px;
+        width: 320px;
         padding: 10px;
         margin: 100px auto;
         z-index: 1;
@@ -274,7 +277,7 @@ a {
         background-color: aqua;
         color: black;
         text-align: center;
-        width: 15rem;
+        width: 230px;
         height: 10rem;
         padding: 3rem;
         border: 2px rgb(0, 0, 0) solid;

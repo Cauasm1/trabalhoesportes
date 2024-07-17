@@ -23,6 +23,7 @@ header {
     max-width: 1000px;
     top: 60%;
     border: 2px black solid;
+    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
     border-radius: 30px;
 }
 
@@ -40,7 +41,6 @@ header {
     background-color: #9e0000;
     border: 2px black solid;
     border-radius: 20px;
-    box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
     box-sizing: border-box;
     font-family: Quicksand, sans-serif;
     font-size: 15px;
