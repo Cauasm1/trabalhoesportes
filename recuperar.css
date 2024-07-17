@@ -23,7 +23,7 @@ header {
     top: 50%;
     border: 2px black solid;
     border-radius: 20px;
-    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+    box-shadow: rgba(145, 0, 0, 0.849) 10px 10px;
 
 }
 
@@ -39,7 +39,7 @@ header {
 }
 
 a {
-    color: black;
+    color: rgb(19, 43, 177);
 }
 
 @media only screen and (max-device-width: 700px) {

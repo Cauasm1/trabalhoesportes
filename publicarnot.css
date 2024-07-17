@@ -18,7 +18,7 @@ header {
     padding: 30px;
     margin: 100px auto;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+    box-shadow: rgba(145, 0, 0, 0.849) 10px 10px;
     border-radius: 20px;
     max-width: 500px;
     position: relative;
@@ -110,7 +110,7 @@ textarea {
 }
 
 .box {
-    background-color: aqua;
+    background-color: rgb(118, 194, 103);
     color: black;
     text-align: center;
     width: 14.7rem;
@@ -141,7 +141,7 @@ textarea {
     }
 
 
-    
+
     .container {
         background-color: #454d6b;
         text-align: center;
@@ -243,7 +243,7 @@ textarea {
     }
 
     .box {
-        background-color: aqua;
+        background-color: rgb(118, 194, 103);
         color: black;
         text-align: center;
         width: 14.7rem;

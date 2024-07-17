@@ -37,11 +37,28 @@ textarea {
 
 .button {
     background-color: #9e0000;
+    border: 2px black solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
     min-width: 90px;
     padding: 8px;
-    border-radius: 20px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #000000;
 }
-
 
 @media only screen and (max-device-width: 700px) {
 

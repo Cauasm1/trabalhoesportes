@@ -119,6 +119,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <br><br>
                     <label>Data:</label>
                     <td><?php echo $row['data']; ?></td>
+                    <br><br>
+                    <label>Caminho:</label>
+                    <td><?php echo $row['caminho']; ?></td>
                     <br>
                     <br>
                     <br>
