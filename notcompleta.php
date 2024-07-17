@@ -115,12 +115,16 @@ $dadoscomentarios = $comentarios->ler();
 
         <?php while ($row = $dadoscomentarios->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="box_comentarios">
+                <br>
                 <td><?php echo $row['comentario']; ?></td>
                 <br><br>
                 <td><?php echo $row['data_envio']; ?></td>
+                <br>
+                <br>
             </div>
             <br>
         <?php endwhile; ?>
+       
 
     </div>
 
