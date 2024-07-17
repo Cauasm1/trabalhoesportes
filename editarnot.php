@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $idusu = $_POST['idusu'];
     $titulo = $_POST['titulo'];
     $noticia = $_POST['noticia'];
-    $caminho = $_POST['caminho'];
+    $caminho = $_FILES['caminho'];
+   
     $noticias->atualizar($idnot, $idusu, $titulo, $noticia, $caminho);
     header('Location: menu.php');
     exit();
@@ -29,8 +30,6 @@ if (isset($_GET['idnot'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,32 +40,36 @@ if (isset($_GET['idnot'])) {
 <body>
 
     <header>
-        <h1>Portal de Notícias</h1>
+        <h1>NEN SPORTS</h1>
     </header>
     <br>
     <br>
+
     <div class="container">
 
         <h1>Editar Notícia</h1>
-        <form method="POST">
-            <input type="hidden" name="idnot" value="<?php echo $row['idnot'] ?>" required>
-            <input type="hidden" name="idusu" value="<?php echo $row['idusu'] ?>" required>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="idnot" value="<?php echo $row['idnot']; ?>">
+            <input type="hidden" name="idusu" value="<?php echo $row['idusu']; ?>">
             <label for="titulo">Titulo:</label>
-            <input type="text" name="titulo" value="<?php echo $row['titulo'] ?>" required>
+            <input type="text" name="titulo" value="<?php echo $row['titulo']; ?>" required>
             <br>
             <br>
             <label for="imagem">Escolha a Imagem</label>
             <br>
             <br>
-            <input type="file" name="imagem" id="caminho" required>
+            <input type="file" name="imagem" id="caminho" ?>" required>
+            <input type="text" name="caminho" value="<?php echo htmlspecialchars($row['caminho']); ?>">
             <br>
             <br>
             <label for="noticia">Noticia:</label>
             <br><br>
             <textarea type="text" name="noticia" required rows="5" cols="33"
-                placeholder="Escreva uma notícia"><?php echo $row['noticia'] ?></textarea>
-            <br><br>
-            <input class="button" type="submit" value="Atualizar">
+                placeholder="Escreva uma notícia"><?php echo $row['noticia']; ?></textarea>
+            <br><br><br>
+            <button class="button" type="submit">Editar</button>
+            <br><br><br>
+            <a class="button" href="menu.php">Voltar</a>
         </form>
 
     </div>

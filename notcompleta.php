@@ -97,8 +97,8 @@ $dadoscomentarios = $comentarios->ler();
         <form method="POST">
             <label>Escreva um comentário:</label>
             <br><br>
-            <textarea id="comentario" name="comentario" rows="5" cols="33"
-                placeholder="Escreva um comentário"></textarea>
+            <textarea id="comentario" name="comentario" rows="5" cols="33" placeholder="Escreva um comentário"
+                required></textarea>
             <br>
             <br>
             <br>

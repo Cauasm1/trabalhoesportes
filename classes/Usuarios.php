@@ -4,7 +4,7 @@ class Usuarios
 {
     private $conn;
 
-    private $table_name = "usuarios"; //nome da tabela
+    private $table_name = "usuarios";
 
     public function __construct($db)
     {
