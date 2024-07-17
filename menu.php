@@ -39,6 +39,7 @@ function saudacao()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="menu.css">
+
     <title>Document</title>
 </head>
 
@@ -51,11 +52,21 @@ function saudacao()
         <br>
 
         <navigation>
-            <a id="primeiro" class="buttoneditar" role="button"
-                href="editar.php?id=<?php echo $_SESSION['usuario_id']; ?>">Conta</a>
-            <a class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
-            <a class="button" role="button" href="logout.php">Logout</a>
+            <div class="dropdown">
+                <button class="menubtn">
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                </button>
+                <div class="dropdown-child">
+                    <a id="primeiro" class="buttoneditar" role="button"
+                        href="editar.php?id=<?php echo $_SESSION['usuario_id']; ?>">Conta</a>
+                    <a class="buttonpublicar" role="button" href="publicarnot.php">Publicar</a>
+                    <a class="button" role="button" href="logout.php">Logout</a>
+                </div>
+            </div>
         </navigation>
+
 
     </header>
 
