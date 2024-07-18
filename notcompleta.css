@@ -1,5 +1,5 @@
 header {
-    background-color: #454d6b;
+    background-color: #1A3636;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 0;
@@ -9,11 +9,10 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
-
 }
 
 .container {
-    background-color: #454d6b;
+    background-color: #677D6A;
     text-align: center;
     width: 400px;
     padding: 60px;
@@ -26,7 +25,7 @@ header {
     z-index: 1;
     max-width: 1000px;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+    box-shadow: #1A3636  10px 10px;
     border-radius: 20px;
     top: 120px;
 }
@@ -36,7 +35,7 @@ img {
 }
 
 .container_comentario {
-    background-color: #454d6b;
+    background-color: #677D6A;
     text-align: center;
     width: 400px;
     padding: 60px;
@@ -50,13 +49,13 @@ img {
     max-width: 1000px;
     align-items: center;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+    box-shadow: #1A3636  10px 10px;
     border-radius: 20px;
     top: 60px;
 }
 
 .container_areacomentarios {
-    background-color: #454d6b;
+    background-color: #677D6A;
     text-align: center;
     width: 500px;
     padding: 60px;
@@ -69,7 +68,7 @@ img {
     z-index: 1;
     max-width: 1000px;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(145, 0, 0, 0.849)  10px 10px;
+    box-shadow: #1A3636 10px 10px;
     border-radius: 20px;
 }
 
@@ -79,7 +78,7 @@ img {
 }
 
 .button {
-    background-color: #9e0000;
+    background-color: #1A3636;
     border: 2px black solid;
     border-radius: 20px;
     box-sizing: border-box;
@@ -111,7 +110,7 @@ textarea {
 
 @media only screen and (max-device-width: 700px) {
     header {
-        background-color: #454d6b;
+        background-color: #1A3636;
         text-align: center;
         padding-top: 5px;
         padding-bottom: 0;
@@ -125,7 +124,7 @@ textarea {
     }
 
     .container {
-        background-color: #454d6b;
+        background-color: #677D6A;
         text-align: center;
         width: 200px;
         padding: 60px;
@@ -143,7 +142,7 @@ textarea {
     }
 
     .container_comentario {
-        background-color: #454d6b;
+        background-color: #677D6A;
         text-align: center;
         width: 200px;
         padding: 60px;
@@ -163,7 +162,7 @@ textarea {
     }
 
     .container_areacomentarios {
-        background-color: #454d6b;
+        background-color: #677D6A;
         text-align: center;
         width: 200px;
         padding: 60px;
@@ -185,7 +184,7 @@ textarea {
     }
 
     .button {
-        background-color: #9e0000;
+        background-color: #1A3636;
         border: 2px black solid;
         border-radius: 20px;
         box-sizing: border-box;
