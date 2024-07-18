@@ -11,17 +11,17 @@ class Comentarios
         $this->conn = $db;
     }
 
-    public function registrar($comentario, $data_envio)
+    public function registrar($idnot, $comentario, $data_envio)
     {
-        $query = "INSERT INTO " . $this->table_name . " (comentario, data_envio) VALUES (?,?)";
+        $query = "INSERT INTO " . $this->table_name . " (idnot, comentario, data_envio) VALUES (?,?,?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$comentario, $data_envio]);
+        $stmt->execute([$idnot, $comentario, $data_envio]);
         return $stmt;
     }
 
-    public function criar($comentario, $data_envio)
+    public function criar($comentario, $data_envio, $idnot)
     {
-        return $this->registrar($comentario, $data_envio);
+        return $this->registrar($comentario, $data_envio, $idnot);
     }
 
     public function ler()
@@ -34,10 +34,10 @@ class Comentarios
 
     public function lerPorId($id)
     {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE id=?";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE idnot=?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt;
     }
 
     public function atualizar($id, $comentario, $data_envio)

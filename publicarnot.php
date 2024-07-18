@@ -119,16 +119,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <br><br>
                     <label>Data:</label>
                     <td><?php echo $row['data']; ?></td>
-                    <br><br>
-                    <label>Caminho:</label>
-                    <td><?php echo $row['caminho']; ?></td>
-                    <br>
-                    <br>
-                    <br>
+                    <br><br><br>
                     <a class="botao" href="deletarnot.php?idnot=<?php echo $row['idnot'] ?>">Deletar</a>
-                    <br>
-                    <br>
-                    <br>
+                    <br><br><br>
                     <a class="botao" href="editarnot.php?idnot=<?php echo $row['idnot'] ?>">Editar</a>
                 </div>
             <?php endwhile; ?>
