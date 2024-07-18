@@ -19,8 +19,7 @@ if (isset($_GET['idnot'])) {
 }
 
 $comentarios = new Comentarios($db);
-
-$dadoscomentarios = $comentarios->ler();
+$dadoscomentarios = $comentarios->lerPorId($idnot);
 ?>
 
 <!DOCTYPE html>
@@ -79,9 +78,10 @@ $dadoscomentarios = $comentarios->ler();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['comentario'])) {
             $comentarios = new Comentarios($db);
+            $idnot = $row['idnot'];
             $comentario = $_POST['comentario'];
             $data_envio = date("Y-m-d H:i:s");
-            $comentarios->registrar($comentario, $data_envio);
+            $comentarios->registrar($idnot, $comentario, $data_envio);
             header('Location: menu.php');
             exit();
         }
@@ -123,8 +123,7 @@ $dadoscomentarios = $comentarios->ler();
                 <br>
             </div>
             <br>
-        <?php endwhile; ?>
-       
+            <?php endwhile; ?>
 
     </div>
 

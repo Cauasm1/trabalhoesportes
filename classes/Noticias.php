@@ -48,11 +48,11 @@ class Noticias
         return $stmt;
     }
 
-    public function atualizar( $idusu, $titulo, $noticia, $caminho, $idnot)
+    public function atualizar( $idusu, $data, $titulo, $noticia, $idnot)
     {
-        $query = "UPDATE " . $this->table_name . " SET idusu=?, titulo=?, noticia=?, caminho=? WHERE idnot=?";
+        $query = "UPDATE " . $this->table_name . " SET idusu=?, data=?, titulo=?, noticia=? WHERE idnot=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$idusu, $titulo, $noticia,$caminho, $idnot]);
+        $stmt->execute([$idusu,$data, $titulo, $noticia, $idnot]);
         return $stmt;
     }
 

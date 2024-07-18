@@ -9,21 +9,20 @@ include_once './classes/Noticias.php';
 
 $noticias = new Noticias($db);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $idnot = $_POST['idnot'];
-    $idusu = $_POST['idusu'];
-    $titulo = $_POST['titulo'];
-    $noticia = $_POST['noticia'];
-    $caminho = $_FILES['caminho'];
-   
-    $noticias->atualizar($idnot, $idusu, $titulo, $noticia, $caminho);
-    header('Location: menu.php');
-    exit();
-}
-
 if (isset($_GET['idnot'])) {
     $idnot = $_GET['idnot'];
     $row = $noticias->lerPorId($idnot);
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $idnot = $_POST['idnot'];
+    $idusu = $_POST['idusu'];
+    $data = $row['data'];
+    $titulo = $_POST['titulo'];
+    $noticia = $_POST['noticia'];
+    $noticias->atualizar($idnot, $idusu, $data, $titulo, $noticia);
+    header('Location: menu.php');
+    exit();
 }
 
 ?>
@@ -40,7 +39,7 @@ if (isset($_GET['idnot'])) {
 <body>
 
     <header>
-        <h1>NEN SPORTS</h1>
+        <h1>NEW SPORTS</h1>
     </header>
     <br>
     <br>
@@ -53,13 +52,6 @@ if (isset($_GET['idnot'])) {
             <input type="hidden" name="idusu" value="<?php echo $row['idusu']; ?>">
             <label for="titulo">Titulo:</label>
             <input type="text" name="titulo" value="<?php echo $row['titulo']; ?>" required>
-            <br>
-            <br>
-            <label for="imagem">Escolha a Imagem</label>
-            <br>
-            <br>
-            <input type="file" name="imagem" id="caminho" ?>" required>
-            <input type="text" name="caminho" value="<?php echo htmlspecialchars($row['caminho']); ?>">
             <br>
             <br>
             <label for="noticia">Noticia:</label>
