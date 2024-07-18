@@ -15,12 +15,14 @@ if (isset($_GET['idnot'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   
     $idnot = $_POST['idnot'];
     $idusu = $_POST['idusu'];
     $data = $row['data'];
     $titulo = $_POST['titulo'];
     $noticia = $_POST['noticia'];
-    $noticias->atualizar($idnot, $idusu, $data, $titulo, $noticia);
+    
+    $noticias->atualizar($idusu, $data, $titulo, $noticia, $idnot);
     header('Location: menu.php');
     exit();
 }

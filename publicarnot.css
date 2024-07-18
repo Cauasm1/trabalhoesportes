@@ -1,5 +1,5 @@
 header {
-    background-color: #454d6b;
+    background-color: #1A3636;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 0;
@@ -12,13 +12,13 @@ header {
 }
 
 .container {
-    background-color: #454d6b;
+    background-color: #677D6A;
     text-align: center;
     width: 400px;
     padding: 30px;
     margin: 100px auto;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(145, 0, 0, 0.849) 10px 10px;
+    box-shadow: #1A3636 10px 10px;
     border-radius: 20px;
     max-width: 500px;
     position: relative;
@@ -36,7 +36,7 @@ textarea {
 }
 
 .button {
-    background-color: #9e0000;
+    background-color: #D6BD98;
     border: 2px black solid;
     border-radius: 20px;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ textarea {
 }
 
 .botao {
-    background-color: rgb(236, 70, 70);
+    background-color:#D6BD98;
     border: 2px black solid;
     border-radius: 20px;
     box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
@@ -110,14 +110,14 @@ textarea {
 }
 
 .box {
-    background-color: rgb(118, 194, 103);
+    background-color: #1A3636;
     color: black;
     text-align: center;
     width: 14.7rem;
     height: 12.5rem;
     padding: 1.8rem;
     border: 2px rgb(0, 0, 0) solid;
-    box-shadow: rgba(177, 240, 6, 0.849)  10px 10px;
+    box-shadow:  #D6BD98  10px 10px;
     border-radius: 20px;
     margin-left: 20px;
     line-break: anywhere;
@@ -129,7 +129,7 @@ textarea {
 
 @media only screen and (max-device-width: 700px) {
     header {
-        background-color: #454d6b;
+        background-color: #1A3636;
         text-align: center;
         padding-top: 5px;
         padding-bottom: 0;
@@ -144,7 +144,7 @@ textarea {
 
 
     .container {
-        background-color: #454d6b;
+        background-color: #677D6A;
         text-align: center;
         width: 300px;
         padding: 30px;
@@ -167,7 +167,7 @@ textarea {
     }
 
     .button {
-        background-color: #9e0000;
+        background-color: #D6BD98;
         border: 2px black solid;
         border-radius: 20px;
         box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
@@ -194,7 +194,7 @@ textarea {
     }
 
     .botao {
-        background-color: rgb(236, 70, 70);
+        background-color: #D6BD98;
         border: 2px black solid;
         border-radius: 20px;
         box-shadow: rgba(3, 87, 76, 0.671) 0 8px 12px;
@@ -244,7 +244,7 @@ textarea {
     }
 
     .box {
-        background-color: rgb(118, 194, 103);
+        background-color: #1A3636;
         color: black;
         text-align: center;
         width: 14.7rem;
